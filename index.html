@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vh-master</title>
+    <link rel="stylesheet" type="text/css" href="vh-master.css">
+</head>
+
+<body>
+    <header>
+        <h1>改良型！</h1>
+    </header>
+
+    <div class="content">
+        <a href="old_index.html">従来型へ</a>
+    </div>
+
+    <footer>
+        <h1>フッター©</h1>
+    </footer>
+
+    <!-- 以下、高さ設定Javascript -->
+    <script>
+        // body読み込み時に一度だけbodyサイズを設定
+        document.body.onload = ()=>{
+            document.body.style.minHeight = window.innerHeight + 'px';
+        }
+
+        // リサイズを停止して500ms後にbodyサイズを設定
+        let timeoutId;
+        window.addEventListener("resize", () => {
+            clearTimeout(timeoutId);
+
+            timeoutId = setTimeout(() => {
+                document.body.style.minHeight = window.innerHeight + 'px';
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>

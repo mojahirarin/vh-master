@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    /* これまでの設定 */
+    min-height: 100vh;
+}
+
+header{
+    background-color: gray;
+    height: 60px;
+}
+
+.content{
+    background-color: darkred;
+    flex: 1;
+}
+
+footer{
+    background-color: black;
+    height: 60px;
+}
