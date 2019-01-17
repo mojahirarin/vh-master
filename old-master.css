@@ -18,8 +18,15 @@ header{
 }
 
 .content{
+    position: relative;
     background-color: darkred;
     flex: 1;
+}
+
+p{
+    position: absolute;
+    bottom: 0;
+    color: red;
 }
 
 footer{
